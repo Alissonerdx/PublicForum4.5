@@ -1,0 +1,127 @@
+﻿@using System.Web.Mvc.AssetVersioning;
+@using System.Security.Claims;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PublicForum</title>
+    <link rel="stylesheet" href="~/Content/libs/bootstrap/css/bootstrap.min.css" />
+    <link href="~/Content/libs/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/sb-admin-2.css" />
+    <link rel="stylesheet" href="~/Content/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Content/libs/tabulator/css/tabulator.css" />
+    <link rel="stylesheet" href="~/Content/libs/tabulator/css/tabulator_bootstrap4.css" />
+    <link rel="stylesheet" href="~/Content/libs/iziModal/css/iziModal.css" />
+    <link rel="stylesheet" href="~/Content/libs/iziToast/css/iziToast.css" />
+    <link rel="stylesheet" href="~/Content/libs/trumbowyg/ui/trumbowyg.css" />
+</head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Topic/Index">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Public Forum</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/Topic/Index">
+                    <i class="fas fa-list"></i>
+                    <span>Topics</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow" id="avatar">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                @{
+                                    var userLoggedFullName = string.Empty;
+                                    var claimsIdentity = User.Identity as ClaimsIdentity;
+                                    var claim = claimsIdentity.FindFirst(c => c.Type == "FullName");
+
+                                    if (claim != null)
+                                    {
+                                        userLoggedFullName = claim.Value;
+                                    }
+                                }
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">@($"{userLoggedFullName}")</span>
+                                <img class="img-profile rounded-circle"
+                                     src="~/Content/img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" id="submenu" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="/Account/Logout">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+            </div>
+            <!-- End of Page Wrapper -->
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Alisson Pereira Anjos</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+            <script src="~/Content/libs/jquery/dist/jquery.min.js"></script>
+            <script src="~/Content/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="~/Content/libs/jquery-easing/jquery.easing.min.js"></script>
+            <script src="~/Scripts/template/sb-admin-2.min.js"></script>
+            <script src="~/Content/libs/tabulator/js/tabulator.js"></script>
+            <script src="~/Content/libs/iziModal/js/iziModal.js"></script>
+            <script src="~/Content/libs/iziToast/js/iziToast.js"></script>
+            <script src="~/Content/libs/trumbowyg/trumbowyg.js"></script>
+            <script src="@Url.VersionedContent("~/Scripts/site.js")"></script>
+            @RenderSection("scripts", required: false)
+</body>
+</html>

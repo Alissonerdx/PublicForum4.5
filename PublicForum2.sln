@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicForum2.Application", "PublicForum2.Application\PublicForum2.Application.csproj", "{F23EDAE8-E8A7-49DF-9F4E-AABE321DFF65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicForum2.Domain", "PublicForum2.Domain\PublicForum2.Domain.csproj", "{F13BC893-3C5B-4EE8-AE10-66EC335DDC19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicForum2.Infra.Identity", "PublicForum2.Infra.Identity\PublicForum2.Infra.Identity.csproj", "{E8B0C41F-6961-44C7-9E82-96F5913EE488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicForum2.Infra.IoC", "PublicForum2.Infra.IoC\PublicForum2.Infra.IoC.csproj", "{62428732-1F44-478F-A18A-C02D4D6DA7A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicForum2.Infra.Data", "PublicForum2.Infra.Data\PublicForum2.Infra.Data.csproj", "{286B3178-B8E5-4DE2-9730-4001E1139D05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicForum2.Presentation", "PublicForum2.Presentation\PublicForum2.Presentation.csproj", "{32435DF7-4790-4A8E-97D4-BB0762C529E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F23EDAE8-E8A7-49DF-9F4E-AABE321DFF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F23EDAE8-E8A7-49DF-9F4E-AABE321DFF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F23EDAE8-E8A7-49DF-9F4E-AABE321DFF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F23EDAE8-E8A7-49DF-9F4E-AABE321DFF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13BC893-3C5B-4EE8-AE10-66EC335DDC19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13BC893-3C5B-4EE8-AE10-66EC335DDC19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13BC893-3C5B-4EE8-AE10-66EC335DDC19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13BC893-3C5B-4EE8-AE10-66EC335DDC19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8B0C41F-6961-44C7-9E82-96F5913EE488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8B0C41F-6961-44C7-9E82-96F5913EE488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8B0C41F-6961-44C7-9E82-96F5913EE488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8B0C41F-6961-44C7-9E82-96F5913EE488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62428732-1F44-478F-A18A-C02D4D6DA7A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62428732-1F44-478F-A18A-C02D4D6DA7A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62428732-1F44-478F-A18A-C02D4D6DA7A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62428732-1F44-478F-A18A-C02D4D6DA7A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{286B3178-B8E5-4DE2-9730-4001E1139D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{286B3178-B8E5-4DE2-9730-4001E1139D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{286B3178-B8E5-4DE2-9730-4001E1139D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{286B3178-B8E5-4DE2-9730-4001E1139D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32435DF7-4790-4A8E-97D4-BB0762C529E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32435DF7-4790-4A8E-97D4-BB0762C529E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32435DF7-4790-4A8E-97D4-BB0762C529E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32435DF7-4790-4A8E-97D4-BB0762C529E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DAD0044-E855-4F66-93FA-CE5897373DDA}
+	EndGlobalSection
+EndGlobal
